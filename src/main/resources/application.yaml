@@ -1,0 +1,9 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/afacere?useSSL=false
+    username: root
+    password: SwAg1211#$16
+    
+#JPA Settings
+
+  jpa.hibernate.ddl_auto: create
