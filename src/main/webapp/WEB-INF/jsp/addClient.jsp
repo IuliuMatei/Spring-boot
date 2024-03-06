@@ -10,7 +10,7 @@
 
 <div id="add">
 <h1> Adauga pacient </h1>
-<form action="/api/users/add" method="post">
+<form action="/users/add" method="post">
     <table>
         <tr>
             <td> Id Client: </td>

@@ -41,15 +41,15 @@
 						Adauga client
 					</button> 
 				</a>
+				<a href="/users/allClients">
+						Afiseaza client
+				</a>
 				<button class="btn btn-secondary" type="button">
 					Updateaza client
 				</button> 
 				<button class="btn btn-secondary" type="button">
 					Sterge client
 				</button> 
-				<button class="btn btn-secondary" type="button">
-					Afiseaza client
-				</button>
 			</div>
 		</div>
 	</div>

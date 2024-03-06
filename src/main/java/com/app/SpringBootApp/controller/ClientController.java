@@ -6,6 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -42,9 +43,11 @@ public class ClientController {
 	}
 	
 	//Read all Clients
-	@GetMapping()
-	public List<Client> getAllClientDetails() {
-		return clientService.getAllClients(); 
+	@GetMapping("/allClients")
+	public String getAllClientDetails(Model model) {
+		List<Client> client = clientService.getAllClients(); 
+		model.addAttribute("client", client);
+		return "seeClients";
 	}
 	
 	@PostMapping("/add")
@@ -56,7 +59,7 @@ public class ClientController {
             @RequestParam("cnp") String cnp) {
 
 		clientService.createClient(id, nume, prenume, adresa, judet, cnp);
-		return "redirect:/index";
+		return "addClient";
 
 			
 }
